@@ -1,0 +1,11 @@
+venv/
+.idea/
+My_blog/__init__.py
+My_blog/__pycache__/
+blog/__pycache__/
+blog/__init__.py
+blog/migrations/__init__.py
+blog/migrations/__pycache__/
+static/__init__.py
+blog/migrations/__pycache__
+blog/migrations/__init__.py
