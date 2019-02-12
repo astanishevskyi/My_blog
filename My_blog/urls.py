@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from blog.views import Index, ArticleDetail, CreateArticle
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', Index.as_view(), name='index'),
+    path('detail/<int:pk>', ArticleDetail.as_view(), name='detail'),
+    path('add_article', CreateArticle.as_view(), name='add_article'),
 ]
