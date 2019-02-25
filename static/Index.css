@@ -1,0 +1,13 @@
+.article-object {
+    border: solid;
+    border-color: #4e555b;
+    margin-top: 20px;
+}
+
+.description {
+    display: block;
+    width: 1000px;
+    overflow: hidden;
+    white-space: inherit;
+    text-overflow: ellipsis;
+}

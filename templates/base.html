@@ -4,6 +4,7 @@
 <head>
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    {% block styles %}{% endblock %}
 </head>
 <body>
 <div id="header">
@@ -15,7 +16,7 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="{% url 'add_article' %}">Features</a>
+      <a class="nav-item nav-link" href="{% url 'add_article' %}">Add article</a>
       <a class="nav-item nav-link" href="#">Pricing</a>
     </div>
   </div>
