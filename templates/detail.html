@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<p> {{ article.title }} </p>
+<p> {{ article.author }} </p>
+<p> {{ article.text }} </p>
+<img src="{% static 'photo.jpg' %}" />
+
+<a href="{% url 'update_article' article.id %}">Update</a>
+<a href="{% url 'delete_article' article.id %}">Delete</a>
+{% endblock %}

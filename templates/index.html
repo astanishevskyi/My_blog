@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'Index.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+    <div id="article-list">
+        {% for article in object_list %}
+            <div class="article-object">
+                <a href="{% url 'detail' article.id %}"><h2> {{ article.title }} </h2></a>
+                <p>Author: {{ article.author }}</p>
+                <p class="description">Description:  {{ article.text }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
