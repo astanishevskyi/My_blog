@@ -9,3 +9,4 @@ blog/migrations/__pycache__/
 static/__init__.py
 blog/migrations/__pycache__
 blog/migrations/__init__.py
+__pycache__/
