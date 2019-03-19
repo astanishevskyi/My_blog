@@ -1,0 +1,8 @@
+.facebook_login_button {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 2px 6px 2px 6px;
+    border: none;
+    border-radius: 12px;
+    display:inline-block;
+}

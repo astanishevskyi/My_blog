@@ -4,7 +4,7 @@ from .models import Article
 from .forms import NewArticleForm
 from django.views.generic import ListView, DetailView, CreateView, FormView, UpdateView, DeleteView, View
 from django.contrib.auth import login, logout
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
 
 class Index(ListView):
@@ -59,3 +59,9 @@ class LogoutView(View):
     def get(self, request):
         logout(request)
         return HttpResponseRedirect('/')
+
+
+class SignUpView(CreateView):
+    form_class = UserCreationForm
+    success_url = '/'
+    template_name = 'sign_up.html'
