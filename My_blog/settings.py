@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from credentials import DJANGO_SECRET_KEY, FACEBOOK_SECRET, FACEBOOK_KEY
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = '*@jo$n2e6%y=-1okh0802866#k+f=vnf0t!om8bl)u@jk064g7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '192.168.0.107', 'example.com']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -115,8 +116,8 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 #facebook
-SOCIAL_AUTH_FACEBOOK_KEY = '329890761203600'  # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET ='e883a2b16325e7f7028da88201b7d29f'  # app key
+SOCIAL_AUTH_FACEBOOK_KEY = FACEBOOK_KEY  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = FACEBOOK_SECRET  # app key
 
 LOGIN_REDIRECT_URL = "/"
 # if you succeed in login, you'll be redirected to the main page.
