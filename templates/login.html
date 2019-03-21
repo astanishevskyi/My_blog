@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'Login.css' %}">
+{% endblock %}
 
 {% if forms.error %}
     <p>Your username and password didn`t match. Try again.</p>
@@ -12,5 +18,11 @@
         <p>{{ form.password }}</p>
         <button type="submit">Sign in</button>
     </form>
+<br>
+<a href="{% provider_login_url "facebook" method="oauth2" %}" class="facebook_login_button">Login with Facebook</a>
+<a href="{% provider_login_url "google" method="oauth2" %}">Login with Google</a>
+
+<a href="{% url 'sign_up' %}">Sing up</a>
+
 {% endblock %}
 
