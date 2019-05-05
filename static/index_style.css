@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Lateef|Raleway');
+
+body {
+	background-color: #0b150d;
+}
+.wrap {
+	
+      width: 100%;
+	
+
+}
+.logo { 
+    position: relative;
+    left: 50px;
+    padding: 20px;    
+    display: inline-block;
+    width: 100px;
+    }
+.top{
+     
+    color: #fff;
+    position: relative;
+    left: 50px;
+    padding: 20px;
+    margin: 50px;	
+    display: inline-block;
+    width: 100px;
+    bottom: 40px;
+    text-align: center;
+
+ }
+.mountains {
+	position: relative;
+	bottom:15px;
+	right:10px;
+}
+.part1 {
+	height: 900px;
+	width: 100%;
+	color: white;	
+	position: relative;
+	left: 15%;	
+	
+
+
+}
+.greetings {
+	width: 250px;
+    padding: 20px;
+	
+	border: 6px solid white;
+
+}
+.drew {
+	position: relative;
+	float: left;
+	left: 25%;	
+		bottom: 230px;
+	margin: 20px;
+	border:6px solid white;
+	border-radius: 50%;
+	
+}
+.part2
+{
+	height: 300px;
+	width: 900px;
+	color: white;	
+	position: relative;
+	left: 25%;	
+	border:6px solid white;
+	bottom: 380px;
+
+}
+h1,h2,h3{color:#8FBC8F}
+h2 {position: relative;
+left:23%;
+bottom: 390px;}
+.part3 {height: 250px;
+	width: 900px;
+	color: white;	
+	position: relative;
+	left: 15%;	
+	border:6px solid white;
+	bottom: 200px;}
+	h3 { position: relative;
+	 bottom: 80px;
+	 right: 30px; }
+a
+{
+	text-decoration: none;
+	color: #fff
+}
+
+.comments {
+	color: #fff;
+	position: relative;
+	left: 15%;
+}

@@ -1,18 +1,60 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block styles %}
-<link rel="stylesheet" href="{% static 'Index.css' %}" />
-{% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web-Blog</title>
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+	<link rel="stylesheet" type="text/css" href="../static/index_style.css">
+</head>
+<body>
+ <div class="wrap">
+ 	<div class="logo"><a href=""><img src="../static/images/logo.png" alt="logo.png" style="height: 100px;width: 100px;"></a></div>
+ 	<div class="top"><a href="">ABOUT</a></div>
+ 	<div class="top"><a href="">BLOGS</a></div>
+ 	<div class="top"><a href="">TRIPS</a></div>
+ 	<div class="top"><a href="">ALBUM</a></div>
+ </div>
+ <img class="mountains" src="../static/images/mountains.jpg" style="width:100%; height:100%" title="mountains" alt="mountains">
 
+ <main>
+ 	<div class="part1">
+ 		<div class="greetings">
+ 		<h1>Привіт</h1>
+ 		<h4>Мене звуть Андрій <br> 
+         і я допомагаю подорожувати людям самостійно	
+ 		</h4></div>
+ 		<img class="drew" src="../static/images/drew.jpg" alt="drew.jpg" style="">
+ 	</div>
+ 	<h2 >Чому я веду цей блог?</h2>
 
-{% block content %}
-    <div id="article-list">
-        {% for article in object_list %}
-            <div class="article-object">
-                <a href="{% url 'detail' article.id %}"><h2> {{ article.title }} </h2></a>
-                <p>Author: {{ article.author }}</p>
-                <p class="description">Description:  {{ article.text }}</p>
-            </div>
-        {% endfor %}
-    </div>
-{% endblock %}
+ 	<div class="part2">
+ 	
+ 	<h4>Цей тревел-блог цілком некомерційний і створюєтьс,щоб ділитися корисним досвідом.Також я проводжу індивідуальні платні консультації в Києві або по скайпу.
+ <br><br>
+Я спеціалізуюся на бюджетних поїдках. Наприклад,моя поїздка в Одесу на тиждень коштувала 980 гривень,включаючи помешкання і дорогу автостопом,а спланована мною 3-дення подорож в Чернівці для 5 осіб обійшлась в 1560 гривень.
+<br><br><br>
+Навіщо я це роблю?
+<br><br>
+Подорожі це моя стихія. Мені важливо робити подорожі доступними більшій кількості людей і ділитися таємним знанням,що подорожувати з комфортом можна,не продаючи нирку.<br><br>
+Зі мною можна зв'язатись через <a href="http://www.facebook.com" >Facebook</a></h4>
+ </div>
+ <div class="part3">
+ 	<h3>Цікаві факти про мене:</h3>
+ 	<ul type="circle">
+ 		<li>58 міст України відвідав</li>
+ 		<li>140+ днів у році я проводжу у подорожах</li>
+        <li>подорожую автостопом та поїздами для заощадження коштів</li>
+        <li>100+ поїздок автостопом</li>
+        <li>Розповідаю різні секрети дешевих мандрівок понад 8-ми тисячній аудиторії у різних соціальних мережах</li>
+        <li>100+ публічних виступів у межах своєї компетенції</li>
+ 	</ul>
+ </div>
+ <div class="comments">
+ 	<form> <p>Введіть коментар:</p><textarea name="comment" cols="120" rows="6" style="color: #bdbdbd"></textarea><p>Введіть своє ім'я:</p>
+ 		<textarea name="name" cols="120" rows="1"></textarea>
+ 	<p>Введіть E-mail:</p>
+ 		<textarea name="name" cols="120" rows="1"></textarea>
+ 	</form>
+ </div>
+ </main>
+</body>
+</html>
