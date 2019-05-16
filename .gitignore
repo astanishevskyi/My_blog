@@ -11,3 +11,4 @@ blog/migrations/__pycache__
 blog/migrations/__init__.py
 __pycache__/
 credentials.py
+resources/

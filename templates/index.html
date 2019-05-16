@@ -48,11 +48,17 @@
         <li>100+ публічних виступів у межах своєї компетенції</li>
  	</ul>
  </div>
- <div class="comments">
- 	<form> <p>Введіть коментар:</p><textarea name="comment" cols="120" rows="6" style="color: #bdbdbd"></textarea><p>Введіть своє ім'я:</p>
- 		<textarea name="name" cols="120" rows="1"></textarea>
- 	<p>Введіть E-mail:</p>
- 		<textarea name="name" cols="120" rows="1"></textarea>
+ <div class="comments" action="{% url 'add_article' %}" method="post">
+ 	<form>
+        {% csrf_token %}
+        <p>Введіть коментар:</p>
+        <input type="text" name="comment" id="comment">
+        <p>Введіть своє ім'я:</p>
+
+        <input type="text" name="name" id="name">
+ 	    <p>Введіть E-mail:</p>
+ 		<input type="text" name="email" id="email">
+        <input type="submit" value="Submit">
  	</form>
  </div>
  </main>
