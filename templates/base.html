@@ -1,43 +1,36 @@
-<!doctype html>
 {% load static %}
+<!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
-    {% block styles %}{% endblock %}
+	<title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href={% static 'base.css' %}>
+
+    {% block styles %}
+    {% endblock %}
+
 </head>
 <body>
-<div id="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="{% url 'index' %}">My blog</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="{% url 'add_article' %}">Add article</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
-        {% if user.is_authenticated %}
-            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
-        {% else %}
-            <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-            <a class="nav-item nav-link" href="{% url 'sign_up' %}">Sign up</a>
-        {% endif %}
+<div class="container">
+    <img src={% static 'images/mountains.jpg' %} alt="Norway" id="main_img">
+
+    <div class="text-block">
+
+        <div class="top"><a href=""><img src="/static/images/logo.png" id="logo_img"></a></div>
+ 	    <div class="top"><a class="nav-item" href="">ABOUT</a></div>
+ 	    <div class="top"><a class="nav-item" href={% url 'blogs' %}>BLOGS</a></div>
+ 	    <div class="top"><a class="nav-item" href="">TRIPS</a></div>
+ 	    <div class="top"><a class="nav-item" href="">ALBUM</a></div>
+        <div id="image_text"><p>Travel Blog</p></div>
     </div>
-  </div>
-</nav>
-</div>
-<div>
-    {% if user.is_authenticated %}
-        <p>Hello, {{ user.username }}</p>
-    {% endif %}
 </div>
 
-    <div class="container">
+{% block content %}
+{% endblock %}
 
-        {% block content %}{% endblock %}
-    </div>
+
+<div id="footer">
+    <p>©YourTravel 2019</p>
+</div>
 
 
 
