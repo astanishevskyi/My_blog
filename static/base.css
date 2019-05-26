@@ -26,24 +26,21 @@ body {
     display: inline;
     margin-left: 3%;
     bottom: 10%;
-
 }
 
 .nav-item {
     vertical-align: top;
     color: white;
-    /*border: solid;*/
     position: relative;
     font-size: 150%;
     text-decoration: none;
     font-weight: bold;
-
 }
 
 #image_text {
     position: relative;
     margin: auto;
-    padding: 10px;
+    padding: 1%;
     color: white;
     font-size: 180%;
     display: flex;
