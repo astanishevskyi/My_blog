@@ -1,0 +1,67 @@
+#main {
+
+}
+
+.part1 {
+    margin-top: 2%;
+	color: white;
+	position: relative;
+    margin-left: 15%;
+    /*border: solid;*/
+}
+
+.greetings {
+	width: 30%;
+    padding: 1%;
+	border: 6px solid white;
+    position: relative;
+    display: inline-block;
+}
+
+#hello {
+    color: #8FBC8F;
+}
+
+.drew {
+	position: relative;
+	left: 20%;
+	border:6px solid white;
+	border-radius: 50%;
+    width: 23%;
+}
+
+.part2 {
+	/*height: 300px;*/
+	/*width: 900px;*/
+    /*margin-top: 25%;*/
+	color: white;
+	position: relative;
+	left: 25%;
+	border:6px solid white;
+    width: 65%;
+
+    padding: 1%;
+}
+
+#header {
+    margin-left: 10%;
+    margin-top: 3%;
+    color: #8FBC8F;
+}
+
+.part3 {
+	/*height: 250px;*/
+	/*width: 900px;*/
+	color: white;
+	position: relative;
+	left: 15%;
+	border:6px solid white;
+    padding: 1%;
+    width: 38%;
+}
+
+/*h3 {*/
+/*	position: relative;*/
+/*	bottom: 80px;*/
+/*	right: 30px;*/
+/*}*/

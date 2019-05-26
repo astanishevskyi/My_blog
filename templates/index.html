@@ -1,18 +1,55 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block styles %}
-<link rel="stylesheet" href="{% static 'Index.css' %}" />
-{% endblock %}
 
+{% block title %}Web-Blog{% endblock %}
+
+{% block styles %}<link rel="stylesheet" type="text/css" href={% static 'index.css' %}>{% endblock %}
 
 {% block content %}
-    <div id="article-list">
-        {% for article in object_list %}
-            <div class="article-object">
-                <a href="{% url 'detail' article.id %}"><h2> {{ article.title }} </h2></a>
-                <p>Author: {{ article.author }}</p>
-                <p class="description">Description:  {{ article.text }}</p>
-            </div>
-        {% endfor %}
-    </div>
+ <div id="main">
+ 	<div class="part1">
+ 		<div class="greetings">
+            <h1 id="hello">Привіт</h1>
+            <h4>Мене звуть Андрій <br>
+             і я допомагаю подорожувати людям самостійно
+            </h4>
+        </div>
+        <img class="drew" alt="drew" src={% static '/images/drew.jpg' %}>
+ 	</div>
+
+     <h2 id="header">Чому я веду цей блог?</h2>
+
+ 	<div class="part2">
+
+ 	<h4>Цей тревел-блог цілком некомерційний і створюєтьс,щоб ділитися корисним досвідом.Також я проводжу індивідуальні платні консультації в Києві або по скайпу.
+    <br><br>
+    Я спеціалізуюся на бюджетних поїдках. Наприклад,моя поїздка в Одесу на тиждень коштувала 980 гривень,включаючи помешкання і дорогу автостопом,а спланована мною 3-дення подорож в Чернівці для 5 осіб обійшлась в 1560 гривень.
+    <br><br><br>
+    Навіщо я це роблю?
+    <br><br>
+    Подорожі це моя стихія. Мені важливо робити подорожі доступними більшій кількості людей і ділитися таємним знанням,що подорожувати з комфортом можна,не продаючи нирку.<br><br>
+    Зі мною можна зв'язатись через <a href="http://facebook.com">Facebook</a></h4>
+     </div>
+
+     <h2 id="header">Цікаві факти про мене:</h2>
+
+     <div class="part3">
+        <ul type="circle">
+            <li>58 міст України відвідав</li>
+            <li>140+ днів у році я проводжу у подорожах</li>
+            <li>подорожую автостопом та поїздами для заощадження коштів</li>
+            <li>100+ поїздок автостопом</li>
+            <li>Розповідаю різні секрети дешевих мандрівок понад 8-ми тисячній аудиторії у різних соціальних мережах</li>
+            <li>100+ публічних виступів у межах своєї компетенції</li>
+        </ul>
+     </div>
+
+{#     <div class="comments">#}
+    {# 	<form> <p>Введіть коментар:</p><textarea name="comment" cols="120" rows="6" style="color: #bdbdbd"></textarea><p>Введіть своє ім'я:</p>#}
+    {# 		<textarea name="name" cols="120" rows="1"></textarea>#}
+    {# 	<p>Введіть E-mail:</p>#}
+    {# 		<textarea name="name" cols="120" rows="1"></textarea>#}
+    {# 	</form>#}
+{#    </div>#}
+ </div>
 {% endblock %}
