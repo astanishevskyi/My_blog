@@ -1,8 +1,14 @@
 from django.db import models
-from django.conf import settings
 
 
-class Article(models.Model):
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=None)
+class BlogsArticle(models.Model):
+    title = models.CharField(max_length=150, null=False, blank=False)
     text = models.TextField(null=False, blank=False)
-    title = models.CharField(max_length=100, null=False, blank=False)
+    time = models.DateField()
+    photo = models.ImageField(upload_to='media', default='photo.jpg')
+
+
+class Comments(models.Model):
+    name = models.CharField(max_length=150, null=False, blank=False)
+    email = models.EmailField(null=False, blank=False)
+    text = models.TextField(null=False, blank=False)
