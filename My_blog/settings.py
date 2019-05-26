@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-from credentials import DJANGO_SECRET_KEY, FACEBOOK_SECRET, FACEBOOK_KEY
+# from credentials import DJANGO_SECRET_KEY, FACEBOOK_SECRET, FACEBOOK_KEY
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +26,7 @@ SECRET_KEY = '*@jo$n2e6%y=-1okh0802866#k+f=vnf0t!om8bl)u@jk064g7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['192.168.1.103', '127.0.0.1']
 
 
 # Application definition
@@ -116,8 +116,8 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 #facebook
-SOCIAL_AUTH_FACEBOOK_KEY = FACEBOOK_KEY  # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = FACEBOOK_SECRET  # app key
+# SOCIAL_AUTH_FACEBOOK_KEY = FACEBOOK_KEY  # App ID
+# SOCIAL_AUTH_FACEBOOK_SECRET = FACEBOOK_SECRET  # app key
 
 ACCOUNT_EMAIL_REQUIRED=True
 ACCOUNT_USERNAME_REQUIRED=True
@@ -184,3 +184,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

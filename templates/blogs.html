@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{#{% load media %}#}
+
+{% block title %}Blogs{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href={% static 'blogs.css' %}>
+
+{% endblock %}
+
+{% block content %}
+
+    <div id="blog-article-list">
+        {% for article in object_list %}
+            <div class="blog-article-object">
+{#                <img src={{ article.photo }}>#}
+                <a  href=""><h2 class="blog-list-title"> {{ article.title }} </h2></a>
+                <p class="blog-list-time">&#128197; {{ article.time }}</p>
+                <div class="blog-list-content">
+                    <img alt="photo" class="blog-list-content-img" src={{ article.photo }}>
+                    <p class="blog-list-text">{{ article.text }}</p>
+                    <a href="" class="blog-list-content-more">Більше</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
