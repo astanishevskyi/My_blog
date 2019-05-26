@@ -15,8 +15,8 @@
 
     <div class="text-block">
 
-        <div class="top"><a href=""><img src="/static/images/logo.png" id="logo_img"></a></div>
- 	    <div class="top"><a class="nav-item" href="">ABOUT</a></div>
+        <div class="top"><a href={% url 'index' %}><img src="/static/images/logo.png" id="logo_img"></a></div>
+ 	    <div class="top"><a class="nav-item" href={% url 'index' %}>ABOUT</a></div>
  	    <div class="top"><a class="nav-item" href={% url 'blogs' %}>BLOGS</a></div>
  	    <div class="top"><a class="nav-item" href="">TRIPS</a></div>
  	    <div class="top"><a class="nav-item" href="">ALBUM</a></div>
