@@ -18,19 +18,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import include, url
 from django.urls import path
-from blog.views import Index, BlogsListView
+from blog.views import Index, BlogsListView, TripsView, AlbumView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Index.as_view(), name='index'),
     path('blogs', BlogsListView.as_view(), name='blogs'),
-    # path('detail/<int:pk>', ArticleDetail.as_view(), name='detail'),
-    # path('add_article/', CreateArticle.as_view(), name='add_article'),
-    # path('update_article/<int:pk>', ArticleUpdateView.as_view(), name='update_article'),
-    # path('delete_article/<int:pk>', ArticleDeleteView.as_view(), name='delete_article'),
-    # path('login/', LoginFormView.as_view(), name='login'),
-    # path('logout/', LogoutView.as_view(), name='logout'),
-    # path('sign_up/', SignUpView.as_view(), name='sign_up'),
+    path('trips', TripsView.as_view(), name='trips'),
+    path('album', AlbumView.as_view(), name='album'),
+
 
     url(r'^accounts/', include('allauth.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

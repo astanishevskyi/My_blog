@@ -1,7 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .models import BlogsArticle
-# from .forms import NewArticleForm
 from django.views.generic import ListView, DetailView, CreateView, FormView, UpdateView, DeleteView, View, TemplateView
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
@@ -15,6 +14,13 @@ class BlogsListView(ListView):
     model = BlogsArticle
     template_name = 'blogs.html'
 
+
+class TripsView(TemplateView):
+    template_name = 'trips.html'
+
+
+class AlbumView(TemplateView):
+    template_name = 'album.html'
 #
 # class ArticleDetail(DetailView):
 #     # model = Article
