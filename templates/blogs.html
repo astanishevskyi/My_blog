@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-{#{% load media %}#}
 
 {% block title %}Blogs{% endblock %}
 
@@ -14,7 +13,6 @@
     <div id="blog-article-list">
         {% for article in object_list %}
             <div class="blog-article-object">
-{#                <img src={{ article.photo }}>#}
                 <a  href=""><h2 class="blog-list-title"> {{ article.title }} </h2></a>
                 <p class="blog-list-time">&#128197; {{ article.time }}</p>
                 <div class="blog-list-content">
