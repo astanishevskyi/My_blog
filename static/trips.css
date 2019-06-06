@@ -1,0 +1,21 @@
+.regions {
+	position: relative;
+	margin-left: 10%;
+	color: #fff;
+	border: 5px solid white;
+	padding: 5px;
+	width: 30%;
+	text-align: center;
+}
+
+.regionlist {
+	color: #fff;
+	position: relative;
+	margin-left: 10%;
+	width: 30%;
+}
+
+li {
+	position: relative;
+	font-size: 100%;
+}
